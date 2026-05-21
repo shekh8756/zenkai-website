@@ -7,51 +7,7 @@ export default function Home() {
 
   const logo =
     "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF7HCuEyUp4bJL56GzTF7X-wm5-YZkZe-wJBOWVvN_OjonlYET2scydstUEs3oAjmErnpJCmc4vNiemkAI0z6mNYr4Uz8tjGYQYmz-3NolTaTKhHJxbVOrLV_YR5NUYo10nSnb01G69BRQ4=s680-w680-h510-rw";
-<section className="max-w-7xl mx-auto px-4 py-8">
-  <div className="grid md:grid-cols-4 gap-5">
-    
-    <div className="bg-white/5 border border-orange-500/10 rounded-[28px] p-6 backdrop-blur-xl">
-      <p className="text-orange-400 text-sm font-bold uppercase">
-        Phone
-      </p>
 
-      <h3 className="mt-3 text-2xl font-black">
-        +91 9661999185
-      </h3>
-    </div>
-
-    <div className="bg-white/5 border border-green-500/10 rounded-[28px] p-6 backdrop-blur-xl">
-      <p className="text-green-400 text-sm font-bold uppercase">
-        Opening Time
-      </p>
-
-      <h3 className="mt-3 text-2xl font-black">
-        10:00 AM
-      </h3>
-    </div>
-
-    <div className="bg-white/5 border border-red-500/10 rounded-[28px] p-6 backdrop-blur-xl">
-      <p className="text-red-400 text-sm font-bold uppercase">
-        Closing Time
-      </p>
-
-      <h3 className="mt-3 text-2xl font-black">
-        11:00 PM
-      </h3>
-    </div>
-
-    <div className="bg-white/5 border border-yellow-500/10 rounded-[28px] p-6 backdrop-blur-xl">
-      <p className="text-yellow-400 text-sm font-bold uppercase">
-        Status
-      </p>
-
-      <h3 className="mt-3 text-2xl font-black text-green-400">
-        OPEN NOW
-      </h3>
-    </div>
-
-  </div>
-</section>
   const menu = [
     { name: "Veg Jhol Momo", category: "Veg", image: "https://junifoods.com/wp-content/uploads/2024/06/Jhol-Momo-in-spicy-tomato-sauce-nepali-recipe.jpg" },
     { name: "Chicken Jhol Momo", category: "Non Veg", image: "https://thebuzznepal.com/wp-content/uploads/2023/07/Untitled-design-6-10.png" },
@@ -65,26 +21,30 @@ export default function Home() {
     { name: "Chicken Zenkai Noodles", category: "Noodles", image: "https://i2.wp.com/eatmovemake.com/wp-content/uploads/2022/08/turkey-ramen-noodle-casserole.jpg" },
   ];
 
+  const filters = ["All", "Veg", "Non Veg", "Noodles"];
+
   const filteredMenu =
     filter === "All" ? menu : menu.filter((item) => item.category === filter);
 
-  const filters = ["All", "Veg", "Non Veg", "Noodles"];
-
   return (
     <main className="bg-[#070707] text-white min-h-screen overflow-x-hidden scroll-smooth">
-      <header className="sticky top-0 z-50 bg-black/80 backdrop-blur-xl border-b border-orange-500/10">
+      <header className="sticky top-0 z-50 bg-black/85 backdrop-blur-xl border-b border-orange-500/10">
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-          <img src={logo} alt="Zenkai Logo" className="w-14 h-14 rounded-full object-cover" />
+          <img
+            src={logo}
+            alt="Zenkai Logo"
+            className="w-14 h-14 rounded-full object-cover border border-orange-500/30"
+          />
 
           <nav className="hidden md:flex gap-8 font-semibold">
-            <a href="#">Home</a>
-            <a href="#menu">Menu</a>
-            <a href="#delivery">Zomato / Swiggy</a>
+            <a href="#" className="hover:text-orange-400">Home</a>
+            <a href="#menu" className="hover:text-orange-400">Menu</a>
+            <a href="#delivery" className="hover:text-orange-400">Zomato / Swiggy</a>
           </nav>
 
           <a
             href="#visit"
-            className="bg-gradient-to-r from-red-600 to-orange-500 px-5 py-3 rounded-xl font-black"
+            className="bg-gradient-to-r from-red-600 to-orange-500 px-5 py-3 rounded-xl font-black active:scale-95 transition"
           >
             Visit Shop
           </a>
@@ -92,7 +52,11 @@ export default function Home() {
       </header>
 
       <section className="relative text-center px-4 pt-14 pb-10 bg-[radial-gradient(circle_at_top,#ff5e0025,transparent_35%),radial-gradient(circle_at_bottom,#ff880015,transparent_25%)]">
-        <img src={logo} alt="Zenkai" className="w-24 h-24 mx-auto rounded-full object-cover mb-5" />
+        <img
+          src={logo}
+          alt="Zenkai"
+          className="w-24 h-24 mx-auto rounded-full object-cover mb-5 border border-orange-500/30"
+        />
 
         <h1 className="text-6xl md:text-9xl font-black">ZENKAI</h1>
 
@@ -100,7 +64,7 @@ export default function Home() {
           Premium Momos & Noodles
         </p>
 
-        <div className="mt-8 inline-block bg-[#111] border border-orange-500/30 px-10 py-6 rounded-[35px]">
+        <div className="mt-8 inline-block bg-[#111] border border-orange-500/30 px-10 py-6 rounded-[35px] shadow-[0_0_60px_rgba(255,115,0,0.12)]">
           <p className="text-orange-400 text-xl font-black">SPECIAL OFFER</p>
           <h2 className="text-7xl font-black mt-2">₹99</h2>
           <p className="text-zinc-400 mt-2 font-semibold">All Items</p>
@@ -116,12 +80,41 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="menu" className="max-w-7xl mx-auto px-4 py-12">
+      <section className="max-w-7xl mx-auto px-4 py-8">
+        <div className="grid md:grid-cols-4 gap-5">
+          <div className="bg-white/5 border border-orange-500/10 rounded-[28px] p-6 backdrop-blur-xl">
+            <p className="text-orange-400 text-sm font-bold uppercase">Phone</p>
+            <h3 className="mt-3 text-xl md:text-2xl font-black">+91 9661999185</h3>
+          </div>
+
+          <div className="bg-white/5 border border-green-500/10 rounded-[28px] p-6 backdrop-blur-xl">
+            <p className="text-green-400 text-sm font-bold uppercase">Opening Time</p>
+            <h3 className="mt-3 text-xl md:text-2xl font-black">10:00 AM</h3>
+          </div>
+
+          <div className="bg-white/5 border border-red-500/10 rounded-[28px] p-6 backdrop-blur-xl">
+            <p className="text-red-400 text-sm font-bold uppercase">Closing Time</p>
+            <h3 className="mt-3 text-xl md:text-2xl font-black">11:00 PM</h3>
+          </div>
+
+          <div className="bg-white/5 border border-yellow-500/10 rounded-[28px] p-6 backdrop-blur-xl">
+            <p className="text-yellow-400 text-sm font-bold uppercase">Status</p>
+            <h3 className="mt-3 text-xl md:text-2xl font-black text-green-400">
+              OPEN NOW
+            </h3>
+          </div>
+        </div>
+      </section>
+
+      <section id="menu" className="max-w-7xl mx-auto px-4 py-10">
         <div className="text-center">
           <p className="text-orange-400 font-black tracking-[5px] uppercase">
             Zenkai Kitchen
           </p>
-          <h2 className="text-5xl md:text-7xl font-black mt-4">Our Premium Menu</h2>
+
+          <h2 className="text-5xl md:text-7xl font-black mt-4">
+            Our Premium Menu
+          </h2>
 
           <div className="flex flex-wrap justify-center gap-4 mt-10">
             {filters.map((btn) => (
@@ -147,11 +140,12 @@ export default function Home() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 mt-12">
           {filteredMenu.map((item) => {
             const isVeg = item.category === "Veg";
+            const isNoodles = item.category === "Noodles";
 
             return (
               <div
                 key={item.name}
-                className="group bg-[#111] border border-orange-500/10 rounded-[28px] overflow-hidden hover:-translate-y-2 hover:border-orange-500/40 active:scale-95 transition-all duration-300"
+                className="group bg-[#111] border border-orange-500/10 rounded-[28px] overflow-hidden hover:-translate-y-2 hover:border-orange-500/40 hover:shadow-[0_0_45px_rgba(255,115,0,0.12)] active:scale-95 transition-all duration-300"
               >
                 <div className="relative overflow-hidden">
                   <img
@@ -162,10 +156,14 @@ export default function Home() {
 
                   <span
                     className={`absolute top-4 left-4 px-4 py-2 rounded-full text-xs font-black text-white ${
-                      isVeg ? "bg-green-600" : "bg-red-600"
+                      isVeg
+                        ? "bg-green-600"
+                        : isNoodles
+                        ? "bg-orange-600"
+                        : "bg-red-600"
                     }`}
                   >
-                    {isVeg ? "VEG" : item.category === "Noodles" ? "NOODLES" : "NON VEG"}
+                    {isVeg ? "VEG" : isNoodles ? "NOODLES" : "NON VEG"}
                   </span>
                 </div>
 
@@ -185,10 +183,17 @@ export default function Home() {
 
       <section id="delivery" className="max-w-7xl mx-auto px-4 pb-12">
         <div className="grid md:grid-cols-2 gap-6">
-          <a className="bg-red-500/10 border border-red-500/30 rounded-[28px] p-8 font-black text-3xl">
+          <a
+            href="#"
+            className="bg-red-500/10 border border-red-500/30 rounded-[28px] p-8 font-black text-3xl hover:bg-red-500/20 active:scale-95 transition"
+          >
             Order on Zomato
           </a>
-          <a className="bg-orange-500/10 border border-orange-500/30 rounded-[28px] p-8 font-black text-3xl">
+
+          <a
+            href="#"
+            className="bg-orange-500/10 border border-orange-500/30 rounded-[28px] p-8 font-black text-3xl hover:bg-orange-500/20 active:scale-95 transition"
+          >
             Order on Swiggy
           </a>
         </div>
@@ -197,18 +202,34 @@ export default function Home() {
       <section id="visit" className="max-w-7xl mx-auto px-4 pb-12">
         <div className="bg-white/5 border border-white/10 rounded-[35px] p-8 text-center">
           <h2 className="text-4xl font-black">Visit Our Shop</h2>
-          <p className="mt-4 text-zinc-300">
-            Address: Gate No, C, Unitech Gate 1, 
-            1, New Town Rd, opposite Unitch, DJ Block(Newtown), 
-            Action Area I, Nkda Marekt, N
-            ewtown, Chakpachuria, West Bengal 700107.
-            +91 9661999185
+
+          <p className="mt-4 text-zinc-300 leading-7">
+            Website se direct buy nahi hoga. Customer shop pe visit kare ya
+            Zomato/Swiggy se order kare.
+          </p>
+
+          <p className="mt-5 text-zinc-300 leading-7">
+            Address: Gate No C, Unitech Gate 1, New Town Rd, opposite Unitech,
+            DJ Block(Newtown), Action Area I, NKDA Market, Newtown,
+            Chakpachuria, West Bengal 700107.
+          </p>
+
+          <p className="mt-3 text-orange-400 font-black">
+            Phone: +91 9661999185
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mt-8">
-            <a href="#" className="px-6 py-3 rounded-full border border-pink-500 text-pink-400 font-bold">Instagram</a>
-            <a href="#" className="px-6 py-3 rounded-full border border-blue-500 text-blue-400 font-bold">Facebook</a>
-            <a href="#" className="px-6 py-3 rounded-full border border-red-500 text-red-400 font-bold">YouTube</a>
+            <a href="#" className="px-6 py-3 rounded-full border border-pink-500 text-pink-400 font-bold active:scale-95 transition">
+              Instagram
+            </a>
+
+            <a href="#" className="px-6 py-3 rounded-full border border-blue-500 text-blue-400 font-bold active:scale-95 transition">
+              Facebook
+            </a>
+
+            <a href="#" className="px-6 py-3 rounded-full border border-red-500 text-red-400 font-bold active:scale-95 transition">
+              YouTube
+            </a>
           </div>
         </div>
       </section>
