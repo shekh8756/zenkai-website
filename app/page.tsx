@@ -7,7 +7,51 @@ export default function Home() {
 
   const logo =
     "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF7HCuEyUp4bJL56GzTF7X-wm5-YZkZe-wJBOWVvN_OjonlYET2scydstUEs3oAjmErnpJCmc4vNiemkAI0z6mNYr4Uz8tjGYQYmz-3NolTaTKhHJxbVOrLV_YR5NUYo10nSnb01G69BRQ4=s680-w680-h510-rw";
+<section className="max-w-7xl mx-auto px-4 py-8">
+  <div className="grid md:grid-cols-4 gap-5">
+    
+    <div className="bg-white/5 border border-orange-500/10 rounded-[28px] p-6 backdrop-blur-xl">
+      <p className="text-orange-400 text-sm font-bold uppercase">
+        Phone
+      </p>
 
+      <h3 className="mt-3 text-2xl font-black">
+        +91 9661999185
+      </h3>
+    </div>
+
+    <div className="bg-white/5 border border-green-500/10 rounded-[28px] p-6 backdrop-blur-xl">
+      <p className="text-green-400 text-sm font-bold uppercase">
+        Opening Time
+      </p>
+
+      <h3 className="mt-3 text-2xl font-black">
+        10:00 AM
+      </h3>
+    </div>
+
+    <div className="bg-white/5 border border-red-500/10 rounded-[28px] p-6 backdrop-blur-xl">
+      <p className="text-red-400 text-sm font-bold uppercase">
+        Closing Time
+      </p>
+
+      <h3 className="mt-3 text-2xl font-black">
+        11:00 PM
+      </h3>
+    </div>
+
+    <div className="bg-white/5 border border-yellow-500/10 rounded-[28px] p-6 backdrop-blur-xl">
+      <p className="text-yellow-400 text-sm font-bold uppercase">
+        Status
+      </p>
+
+      <h3 className="mt-3 text-2xl font-black text-green-400">
+        OPEN NOW
+      </h3>
+    </div>
+
+  </div>
+</section>
   const menu = [
     { name: "Veg Jhol Momo", category: "Veg", image: "https://junifoods.com/wp-content/uploads/2024/06/Jhol-Momo-in-spicy-tomato-sauce-nepali-recipe.jpg" },
     { name: "Chicken Jhol Momo", category: "Non Veg", image: "https://thebuzznepal.com/wp-content/uploads/2023/07/Untitled-design-6-10.png" },
@@ -158,6 +202,7 @@ export default function Home() {
             1, New Town Rd, opposite Unitch, DJ Block(Newtown), 
             Action Area I, Nkda Marekt, N
             ewtown, Chakpachuria, West Bengal 700107.
+            +91 9661999185
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mt-8">
