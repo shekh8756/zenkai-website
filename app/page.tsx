@@ -89,12 +89,12 @@ export default function Home() {
 
           <div className="bg-white/5 border border-green-500/10 rounded-[28px] p-6 backdrop-blur-xl">
             <p className="text-green-400 text-sm font-bold uppercase">Opening Time</p>
-            <h3 className="mt-3 text-xl md:text-2xl font-black">10:00 AM</h3>
+            <h3 className="mt-3 text-xl md:text-2xl font-black">04:00 PM</h3>
           </div>
 
           <div className="bg-white/5 border border-red-500/10 rounded-[28px] p-6 backdrop-blur-xl">
             <p className="text-red-400 text-sm font-bold uppercase">Closing Time</p>
-            <h3 className="mt-3 text-xl md:text-2xl font-black">11:00 PM</h3>
+            <h3 className="mt-3 text-xl md:text-2xl font-black">04:00 AM</h3>
           </div>
 
           <div className="bg-white/5 border border-yellow-500/10 rounded-[28px] p-6 backdrop-blur-xl">
