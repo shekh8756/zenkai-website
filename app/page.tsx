@@ -214,23 +214,40 @@ export default function Home() {
             Chakpachuria, West Bengal 700107.
           </p>
 
-          <p className="mt-3 text-orange-400 font-black">
-            Phone: +91 9661999185
-          </p>
+<p className="mt-3 text-orange-400 font-black">
+  Phone: +91 9661999185
+</p>
 
-          <div className="flex flex-wrap justify-center gap-4 mt-8">
-            <a href="#" className="px-6 py-3 rounded-full border border-pink-500 text-pink-400 font-bold active:scale-95 transition">
-              Instagram
-            </a>
+<div className="flex flex-wrap justify-center gap-4 mt-8">
 
-            <a href="#" className="px-6 py-3 rounded-full border border-blue-500 text-blue-400 font-bold active:scale-95 transition">
-              Facebook
-            </a>
+  <a
+    href="https://www.instagram.com/zenkaikitchen/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="px-6 py-3 rounded-full border border-pink-500 text-pink-400 font-bold hover:bg-pink-500 hover:text-white active:scale-95 transition"
+  >
+    Instagram
+  </a>
 
-            <a href="#" className="px-6 py-3 rounded-full border border-red-500 text-red-400 font-bold active:scale-95 transition">
-              YouTube
-            </a>
-          </div>
+  <a
+    href="https://www.facebook.com/zenkaikitchen"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="px-6 py-3 rounded-full border border-blue-500 text-blue-400 font-bold hover:bg-blue-500 hover:text-white active:scale-95 transition"
+  >
+    Facebook
+  </a>
+
+  <a
+    href="https://www.youtube.com/channel/UCdBNkFbym0fz5nIhXQG5-SA"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="px-6 py-3 rounded-full border border-red-500 text-red-400 font-bold hover:bg-red-500 hover:text-white active:scale-95 transition"
+  >
+    YouTube
+  </a>
+
+</div>
         </div>
       </section>
 
